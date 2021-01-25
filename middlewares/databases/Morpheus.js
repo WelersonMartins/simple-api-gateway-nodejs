@@ -16,8 +16,8 @@ class Morpheus{
         const config = {
             user: this.user,
             password: this.password,
-            server: '192.168.50.24', // You can use 'localhost\\instance' to connect to named instance
-            database: 'MORPHEUS',
+            server: this.ip, // You can use 'localhost\\instance' to connect to named instance
+            database: this.database,
             "options": {
                 "encrypt": true,
                 "enableArithAbort": true
