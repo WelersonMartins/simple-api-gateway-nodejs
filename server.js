@@ -19,7 +19,11 @@ module.exports = () => {
     // parse application/x-www-form-urlencoded
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cookieParser());
-    app.use(jwt.verifyJWT())
+
+    // middleware que verifica o jwt da mensagem
+    app.use( (req, res, next) => {
+      new jwt().verify (req, res, next)
+    })
     // consign adiciona as rotas da pasta controller para o roteador do express
     consign()
       .include('controllers')

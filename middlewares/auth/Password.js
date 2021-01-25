@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs')
 class Password {
     /**
      * Cria um hash em bvrypt para o conjunto de caracteres informados
+     * essa senha pura é decodada de base64 que vem do frontend
      * @param {String} senhaPura 
      */
     create (senhaPura) {

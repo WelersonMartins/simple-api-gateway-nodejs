@@ -13,7 +13,7 @@ module.exports = (app, httpProxy) => {
 
     app.get('/dashboard', (req, res, next) => {
 
-        auth.verifyJWT(req, res, next)
+        auth.verify,JWT(req, res, next)
     })
 
     app.get('/passwd', (req, res, next) => {
